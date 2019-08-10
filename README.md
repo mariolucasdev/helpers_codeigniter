@@ -23,7 +23,8 @@ helper para carregamento simplicado de views.
     #### INSTANCIA
     
     * no construtor da sua classe intancie a classe da seguinte forma:
-    $this->template = new Template('templates', 'param');
+    ```php $this->template = new Template('templates', 'param');```
+    
       o primeiro parâmetro é referente ao caminho arquivos de template,
       exemplo: header, aside e footer ouseja arquivos
       que não mudam.
@@ -47,10 +48,10 @@ helper para carregamento simplicado de views.
     o segundo parâmetro carrega apenas um arquivo 'home' ou vários se você passa um array ex:
     
     primeira forma:
-    $this->template->load($data, 'home');
+    ```php $this->template->load($data, 'home');```
     
     segunda forma:
-    $this->template->load($data, ['sobre', 'home', newslater']);
+    ```php$this->template->load($data, ['sobre', 'home', newslater']);```
     
     
       

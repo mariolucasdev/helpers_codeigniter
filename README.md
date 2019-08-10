@@ -5,26 +5,28 @@ Esse repositório será detinado a helpers para auxiliar programadores no desnev
 ## TEMPLATE HELPER
 
 helper para carregamento simplicado de views.
-  ### INSTALAÇÃO:
+ ### INSTALAÇÃO:
     
     1 - Insira o arquivo dentro na pasta 'application/helpers'
     2 - Carregue o helper você pode fazer de 2 maneiras, porém como será
     usado contantemente sugiro o primeiro método.
       
       - Vár em 'application/config/autoload.php' e em carrgue template dessa
-      forma: $autoload['helper'] = array('template');
+      ```php
+      $autoload['helper'] = array('template');
+      ```
       
       - Ou use na sua classe $this->load->helpers('template');
       Obs: das duas formas funcionam, porém da primeira maneira
       você só precisará fazer uma ver, e todo seu projeto terá acesso.
-  
-  ### USO:
+ 
+ ### USO:
+ 
+    INSTANCIA
     
-    #### INSTANCIA
-    
-    * no construtor da sua classe intancie a classe da seguinte forma:
+    no construtor da sua classe intancie a classe da seguinte forma:   
     ```php
-    $this->template = new Template('templates', 'param');
+    $this->template = new Template('templates', 'param');]
     ```
     
       o primeiro parâmetro é referente ao caminho arquivos de template,
@@ -41,7 +43,7 @@ helper para carregamento simplicado de views.
       backend/ então você intancia com o segundo parametro
       apontando para a pasta em questão.
       
-    #### CARREGANDO ARQUIVOS
+    ###### CARREGANDO ARQUIVOS
     
     Depois de instanciado você pode carregar seu template usando o método load(), esse
     método recebe 2 parâmetros, o primeiro com os dados
